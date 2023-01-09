@@ -14,7 +14,7 @@ body {
 #app {
   width: 100vw;
   height: 100vh;
-  background: #343541;
+  background: #fcfbff;
 
   display: flex;
   flex-direction: column;
@@ -24,17 +24,14 @@ body {
 
 #chat_container {
   flex: 1;
-  width: 100%;
+  width: 50%;
   height: 100%;
   overflow-y: scroll;
-
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   gap: 10px;
-
   -ms-overflow-style: none;
   scrollbar-width: none;
-
   padding-bottom: 20px;
   scroll-behavior: smooth;
 }
@@ -45,12 +42,14 @@ body {
 }
 
 .wrapper {
-  width: 100%;
+  width: 500px;
   padding: 15px;
 }
 
 .ai {
-  background: #40414F;
+  background: #e3e3e3;
+  border-radius: 10px;
+  float: right;
 }
 
 .chat {
@@ -88,12 +87,11 @@ body {
 
 .message {
   flex: 1;
-
-  color: #dcdcdc;
+  color: #343541;
   font-size: 20px;
-
   max-width: 100%;
   overflow-x: scroll;
+  font-weight: 500;
 
   /*
    * white space refers to any spaces, tabs, or newline characters that are used to format the CSS code
@@ -113,23 +111,23 @@ body {
 }
 
 form {
-  width: 100%;
+  width: 50%;
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 10px;
-  background: #40414F;
-
+  background: #ddd;
   display: flex;
   flex-direction: row;
   gap: 10px;
+  border-radius: 13px;
 }
 
 textarea {
   width: 100%;
 
-  color: #fff;
+  color: #404040;
   font-size: 18px;
-
+  font-weight: 500;
   padding: 10px;
   background: transparent;
   border-radius: 5px;
