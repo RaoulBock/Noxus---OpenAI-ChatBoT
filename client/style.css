@@ -45,7 +45,7 @@ body {
 }
 
 .wrapper {
-  width: 50%;
+  width: 100%;
   padding: 15px;
 }
 
@@ -121,9 +121,7 @@ form {
   background: #40414F;
   display: flex;
   flex-direction: row;
-  margin-bottom: 10px;
   gap: 10px;
-  border-radius: 10px;
 }
 
 textarea {
