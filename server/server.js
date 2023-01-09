@@ -10,6 +10,7 @@ const configuration = new Configuration({
 });
 
 const openai = new OpenAIApi(configuration);
+
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -27,7 +28,7 @@ app.post("/", async (req, res) => {
     const response = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: `${prompt}`,
-      temperature: 1,
+      temperature: 0,
       max_tokens: 3000,
       top_p: 1,
       frequency_penalty: 0.5,
