@@ -6,8 +6,10 @@ import { Configuration, OpenAIApi } from "openai";
 dotenv.config();
 
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY
 });
+
+console.log(process.env.OPENAI_API_KEY);
 
 const openai = new OpenAIApi(configuration);
 
@@ -17,7 +19,7 @@ app.use(express.json());
 
 app.get("/", async (req, res) => {
   res.status(200).send({
-    message: "Hello from Noxus",
+    message: "Hello from Noxus"
   });
 });
 
@@ -32,14 +34,14 @@ app.post("/", async (req, res) => {
       max_tokens: 3000,
       top_p: 1,
       frequency_penalty: 0.5,
-      presence_penalty: 0,
+      presence_penalty: 0
     });
 
     res.status(200).send({
-      bot: response.data.choices[0].text,
+      bot: response.data.choices[0].text
     });
   } catch (err) {
-    console.log(err);
+    // console.log(err);
     res.status(500).send({ err });
   }
 });
