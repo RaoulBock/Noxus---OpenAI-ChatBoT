@@ -9,8 +9,6 @@ const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY
 });
 
-console.log(process.env.OPENAI_API_KEY);
-
 const openai = new OpenAIApi(configuration);
 
 const app = express();
@@ -37,11 +35,13 @@ app.post("/", async (req, res) => {
       presence_penalty: 0
     });
 
+    console.log(response);
+
     res.status(200).send({
       bot: response.data.choices[0].text
     });
   } catch (err) {
-    // console.log(err);
+    console.log(err);
     res.status(500).send({ err });
   }
 });
